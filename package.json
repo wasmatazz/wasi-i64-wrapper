@@ -1,0 +1,22 @@
+{
+  "name": "wasi-i64-wrapper",
+  "version": "1.0.0",
+  "description": "Wrapper for WASI functions that use 64-bit integers.",
+  "main": "index.js",
+  "repository": "https://github.com/wasmatazz/wasi-i64-wrapper",
+  "author": "Duncan Cross <duncan.cross@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@wasmatazz/c-cpp-base": "^1.0.1"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "wrapper.wasm"
+  ],
+  "scripts": {
+    "prepublishOnly": "wasmatazz-c wrapper.c -o wrapper.wasm",
+    "test": "node test.js"
+  }
+}
